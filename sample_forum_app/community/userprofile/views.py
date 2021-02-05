@@ -2,12 +2,15 @@ from django.shortcuts import render,redirect
 from .forms import UserRegistration
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from .decorators import unauthorized_user
 
 # Create your views here.
 
 def home(request):
     return render(request,'userprofile/base.html')
 
+@unauthorized_user
 def userRegistration(request):
     form = UserRegistration()
     if request.method == 'POST':
@@ -20,6 +23,7 @@ def userRegistration(request):
     context={'form': form} #still need to understand why dict is being used here
     return render(request,'userprofile/register.html',context)
 
+@unauthorized_user
 def userLogin(request):
     if request.method=='POST':
         username=request.POST.get('username') #grabbing the username
@@ -35,6 +39,10 @@ def userLogin(request):
 def userLogout(request):
     logout(request)
     return render(request, 'forum/index.html')
+
+@login_required(login_url='userprofile:login')
+def profile(request):
+    return render(request, 'userprofile/profile.html')
 
 
     
