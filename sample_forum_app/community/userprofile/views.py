@@ -29,7 +29,7 @@ def userLogin(request):
         username=request.POST.get('username') #grabbing the username
         password=request.POST.get('password') #grabbing the password
         user=authenticate(request,username=username,password=password)
-        if user is not None:
+        if user is not None: #checking to see if the user exists
             login(request, user)
             return redirect('forum:home')
         else:
