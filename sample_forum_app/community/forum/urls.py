@@ -6,5 +6,6 @@ app_name = "forum"
 
 urlpatterns = [
     path('',views.home,name="home"),
+   
     
 ]
