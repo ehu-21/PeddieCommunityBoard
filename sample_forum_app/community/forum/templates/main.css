@@ -1,5 +1,5 @@
 .nav-link {
-    color: black !important;
+    color: blue !important;
 }
 
 #error {
@@ -7,12 +7,14 @@
 }
 
 .button{
+    background-color: #1C4587;
+    color: #F1C232;
     font-weight: bold;
     font-size: 16px;
     padding: 12px 24px;
     border: none;
-    color: #F1C232;
-    background-color: #1C4587;
+    
+    
 }
 
 .detailsText {

@@ -1,7 +1,8 @@
 from django.db import models
-
+from django.conf import settings
 # Create your models here.
-class Post(models.Model):
-    thread = models.CharField(max_length=30)
-    title = models.CharField(max_length=50)
-    desscription = models.CharField(max_length=200)
+class Forum(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
+    desc = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
