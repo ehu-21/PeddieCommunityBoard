@@ -25,19 +25,28 @@
             <li class="nav-item">
               <a class="nav-link" href="">Home</a>
             </li>
+          </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="{% url 'forum:about' %}">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="termsConditions.html">Terms and Conditions</a>
-            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'forum:termsConditions' %}">Terms And Conditions</a>
+          </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'userprofile:profile' %}">Profile</a>
             </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'userprofile:logout' %}">Logout</a>
-              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'userprofile:logout' %}">Logout</a>
+
               {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'forum:about' %}">About</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'forum:termsConditions' %}">Terms And Conditions</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'userprofile:login' %}">Login</a>
             </li>

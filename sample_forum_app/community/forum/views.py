@@ -8,6 +8,12 @@ from django.urls import reverse_lazy
 def home(request):
     return render(request, 'forum/index.html')
 
+def termsAndConditions(request):
+    return render(request, 'forum/termsConditions.html')
+
+def about(request):
+    return render(request, 'forum/about.html')
+
 # class PostCreateView(BSModalCreateView):
 #     template_name = 'templates/forum/create_post.html'
 #     form_class = PostForm
