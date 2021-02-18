@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-# from .forms import PostForm
-# from .models import Post
-# from bootstrap_modal_forms.generic import BSModalCreateView
+from .forms import PostForm
+
 
 # Create your views here.
 def home(request):
@@ -14,8 +13,12 @@ def termsAndConditions(request):
 def about(request):
     return render(request, 'forum/about.html')
 
-# class PostCreateView(BSModalCreateView):
-#     template_name = 'templates/forum/create_post.html'
-#     form_class = PostForm
-#     success_message = 'Success: Post was created!'
-#     success_url = reverse_lazy('index')
+def newPost(request):
+    template = 'forum/newPost.html'
+    form = PostForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    else:
+        form = PostForm()
+    context = {'form':form}
+    return render(request, template, context)

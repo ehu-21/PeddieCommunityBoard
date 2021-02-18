@@ -21,3 +21,14 @@
     font-size: 18px;
     color: blue;
 }
+.h1Text {
+    color: goldenrod;
+    text-align:center;
+    font-family: "brandon-grotesque", sans-serif;
+}
+
+.h2Text {
+    color: #15365e;
+    text-align:center;
+    font-family: "brandon-grotesque", sans-serif;
+}

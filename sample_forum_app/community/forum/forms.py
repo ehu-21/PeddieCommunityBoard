@@ -1,7 +1,8 @@
-# from .models import Post
-# from bootstrap_modal_forms.forms import BSModalModelForm
+from .models import Post
+from django import forms
 
-# class PostForm(BSModalModelForm):
-#     class Meta:
-#         model = Post
-#         fields = ['Thread name', 'Title', 'Description']
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'content']
