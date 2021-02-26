@@ -1,8 +1,13 @@
 {% extends 'userprofile/base.html' %}
 
 {% block content %}
-<head>
-    <link href="\sample_forum_app\community\forum\templates\main.css" type="text/css" rel="stylesheet"> 
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head> 
+    <!--\sample_forum_app\community\forum\templates\main.css (this is full path, in case we need it)-->
+    <base href='/'>
+    <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
 </head>
 
 <div class="container-fluid">

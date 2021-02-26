@@ -6,7 +6,8 @@
     color: red;
 }
 
-.button{
+button{
+    display: inline-block;
     background-color: #1C4587;
     color: #F1C232;
     font-weight: bold; 
@@ -21,21 +22,22 @@
 }
 
 h1 {
+    font-size: 18px;
     color: goldenrod;
-    font-size:2em;
     text-align:center;
-    font-size: 12px;
     font-family: "brandon-grotesque", sans-serif;
 }
 
 .h2Text {
+    font-weight: bold;
     color: #15365e;
     text-align:left;
-    font-size: 12px;
+    font-size: 20px;
     font-family: "brandon-grotesque", sans-serif;
 }
 
 h3 {
+    font-size: 12px;
     color: black;
     font-family: "brandon-grotesque", sans-serif;
 }
@@ -75,6 +77,13 @@ p{
 }
 
 .table{
-    table-layout: fixed;
-  width: 100%;  
+    table-layout: auto;
+  width: 80%;  
+}
+
+.h1Text{
+    color: #15365e;
+    text-align:left;
+    font-size: 20px;
+    font-family: "brandon-grotesque", sans-serif;
 }

@@ -5,6 +5,7 @@
 <head>
   <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
 </head>
+<h1>Create a new post</h1>
 <form method="POST">{% csrf_token %}
   {{form.as_p}}
   <button type="submit">Post</button>
