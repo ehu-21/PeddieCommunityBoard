@@ -1,6 +1,10 @@
 {% extends 'userprofile/base.html' %}
 
 {% block content %}
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
+</head>
 <form method="POST">{% csrf_token %}
   {{form.as_p}}
   <button type="submit">Post</button>

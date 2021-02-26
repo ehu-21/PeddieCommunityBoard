@@ -1,0 +1,80 @@
+.nav-link {
+    color: goldenrod !important;
+}
+
+#error {
+    color: red;
+}
+
+.button{
+    background-color: #1C4587;
+    color: #F1C232;
+    font-weight: bold; 
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+}
+
+.detailsText {
+    font-size: 18px;
+    color: blue;
+}
+
+h1 {
+    color: goldenrod;
+    font-size:2em;
+    text-align:center;
+    font-size: 12px;
+    font-family: "brandon-grotesque", sans-serif;
+}
+
+.h2Text {
+    color: #15365e;
+    text-align:left;
+    font-size: 12px;
+    font-family: "brandon-grotesque", sans-serif;
+}
+
+h3 {
+    color: black;
+    font-family: "brandon-grotesque", sans-serif;
+}
+
+p{
+    font-size: medium;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+.column{
+    float:left;
+    padding:10 px;
+
+}
+.left{
+    width:25%;
+}
+
+.right{
+    width:75%;
+}
+
+.row:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.picture {
+    justify-content:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5%;
+}
+
+.table{
+    table-layout: fixed;
+  width: 100%;  
+}

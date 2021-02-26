@@ -1,47 +1,54 @@
 {% extends 'userprofile/base.html' %}
 
-{% block content %}
+<!-- {% block content %} -->
 <!doctype html>
 <html lang="en">
-
-<head>
-  <link href="\sample_forum_app\community\forum\templates\main.css" type="text/css" rel="stylesheet"> 
+{% load static %}
+<head> 
+    <!--\sample_forum_app\community\forum\templates\main.css (this is full path, in case we need it)-->
+    <base href='/'>
+    <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
 </head>
 
 <body>
 <!--ADD STYLING TO EVERYTHING; classes incompelte rn-->
 <div id="about website">
-    <h1 class="h1Text">About the Website</h1>
+    <h1 style= "text-align:center;">About the Website</h1>
 
-    <h2 class="h2Text">Description</h2>
-    <p>
-        <!--enter info-->
+    <h3 class="text-left h2Text">Description</h3>
+    <p class ="detailsText">
+        Using this website, Peddie students can learn about the different clubs
+        at Peddie, as well as their meeting times. Not only does this website 
+        reduce all school emails, but having a place where students can learn 
+        more about the clubs at Peddie provides an immersive experience to all
+        that Peddie has to offer in the extracurriculars. 
     </p>    
 
-    <h2 class="text-left h2Text">Goals</h2>
-    <p>
-        <!--enter info-->
+    <h3 class="text-left h2Text">Goals</h3>
+    <p class="detailsText">
+        This website is to help Peddie students, whether remote or in-person,
+        connect with each other and learn more about the clubs at Peddie.
     </p>
 </div>
-
+<!-- \sample_forum_app\community\forum\static\Pictures\elizabeth.jpg -->
 <div id="meet team">
-    <h1 class="h1Text">Meet the Team</h1>
-    <img src=""/>
-    <h2>person 1</h2>
-    <h3>email</h3>
-    <img src=""/>
-    <h2>person 2</h2>
-    <h3>email</h3>
-    <img src=""/>
-    <h2>person 3</h2>
-    <h3>email</h3>
-    <img src=""/>
-    <h2>person 4</h2>
-    <h3>email</h3>
-    <img src=""/>
-    <h2>person 5</h2>
-    <h3>email</h3>
+    <h1 style= "text-align:center;">Meet the Team</h1>
+    <img class = "picture" src="{% static 'forum/elizabeth1.jpg' %}"/>
+    <h2 class="text-left h2Text">Elizabeth Hu</h2>
+    <h3>ehu-21@peddie.org</h3>
+    <!-- <img class = "picture" src="{% static '/forum/karishma.jpg' %}"/>
+    <h2 class="text-left h2Text">Karishma Gupta</h2>
+    <h3>kgupta-23@peddie.org</h3>
+    <img class = "picture" src="\sample_forum_app\community\forum\templates\Pictures\elizabeth.jpg"/>
+    <h2 class="text-left h2Text">Mathias Prodani</h2>
+    <h3>mprodani-21@peddie.org</h3>
+    <img class = "picture" src="\sample_forum_app\community\forum\templates\Pictures\karishma.jpg"/>
+    <h2 class="text-left h2Text">Rohan Nunugonda</h2>
+    <h3>rnunugonda-22@peddie.org</h3>
+    <img class = "picture" src="\sample_forum_app\community\forum\templates\Pictures\matt.jpg"/>
+    <h2 class="text-left h2Text">Trent DeMesa</h2> -->
+    <h3>tdemesa-21@peddie.org</h3>
 </div>
 </body>
 </html>
-{% endblock %}
+<!-- {% endblock %} -->

@@ -10,6 +10,9 @@ from .decorators import unauthorized_user
 def home(request):
     return render(request,'userprofile/base.html')
 
+def gauth(request):
+    return render(request, 'userprofile/gauth.html')
+
 @unauthorized_user
 def userRegistration(request):
     form = UserRegistration()

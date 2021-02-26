@@ -13,6 +13,7 @@ def termsAndConditions(request):
 def about(request):
     return render(request, 'forum/about.html')
 
+
 def newPost(request):
     template = 'forum/newPost.html'
     form = PostForm(request.POST or None)
@@ -22,3 +23,6 @@ def newPost(request):
         form = PostForm()
     context = {'form':form}
     return render(request, template, context)
+
+# class PostListView(ListView):
+#     model = Post
