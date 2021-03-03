@@ -5,10 +5,10 @@
 <head>
   <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
 </head>
-<h1>Create a new post</h1>
+<h1>Create a New Post</h1>
 <form method="POST">{% csrf_token %}
   {{form.as_p}}
-  <button type="submit">Post</button>
+  <button class="btn btn-secondary" type="submit">Post</button>
 </form>
 
 

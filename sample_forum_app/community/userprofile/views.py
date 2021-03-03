@@ -8,7 +8,7 @@ from .decorators import unauthorized_user
 # Create your views here.
 
 def home(request):
-    return render(request,'userprofile/base.html')
+    return render(request,'userprofile/login.html')
 
 def gauth(request):
     return render(request, 'userprofile/gauth.html')

@@ -6,30 +6,22 @@
 <head>
     <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
 </head>
-<nav class = "navbar navbar-expand-lg navbar-dark b-warning">
-    <a class = "navbar-brand" href="index.html">Forum</a>
-  <!--
-    <button class = "navbar-toggler" type = "button" data-toggle="collapse" 
-  -->
-    <div class="collapse navbar-collapse" id>
-</nav>
+
 
 <div class = "row">
-    <div class="column left">
-        <h2>tags</h2>
-        <p>tag</p>
+    <div class="column left" style="border-right:1px solid gray">
+        <h2 style="width:auto; text-align:center;">Tags</h2>
+        <a style="width:auto; text-align:center;" class="tag1" href"/">tag 1</a>  
+       <!--<p style= "width:100px; text-align:right;">tag</p>--> 
     </div>
     <div class="column right">
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-lg-offset-0">
         <div class="card-body">
-                <h1 style="font-size:30px; color:black; display:inline-block; width:400px;">Posts</h1>
-        
-           
-                    <button type="button">
-                        <a href="{% url 'forum:newPost' %}">New Post</a>
-                    </button>
+                <h1 style="font-size:30px; color:black; display:inline-block; width:700px; text-align:left;">Posts</h1>
+                        <a class="post" href="{% url 'forum:newPost' %}" style="color:goldenrod;">New Post</a>
+            
                 
 
         <table class="table">
@@ -54,7 +46,7 @@
     </div>
 
 
-<div class="modal fade" id="newModal">
+<!-- <div class="modal fade" id="newModal">
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
@@ -83,6 +75,12 @@
         </div>
     </div>
 </div>
-</div>
+</div> -->
+
+<h1>{{ post.title }}</h1>
+<small>By: {{ post.user }}</small></br>
+<hr>
+<br/>
+{{ post.body }}
 
 {% endblock %}

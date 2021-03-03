@@ -5,38 +5,34 @@
 <html lang="en">
 {% load static %}
 <head> 
-    <!--\sample_forum_app\community\forum\templates\main.css (this is full path, in case we need it)-->
     <base href='/'>
-    <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
+    <link rel="stylesheet" href="{% static 'forum/main2.css' %}"> 
 </head>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4 col-lg-offset-4" id="loginBlock">
+<div id="login page">
+    <h1 class="text-center h1Text">Welcome to the Peddie Community Board!</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4" id="loginBlock">
             
-            <div class="logo">
+               <div class="logo">
+               </div>
 
-            </div>
-
-            <div class="pageTitle">Login</div>
-
-            <div class="row pad">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <form action="" method="POST" role="form">
-                        {% csrf_token %}
-                        {{form.as_p}}
-                        <input type="text" name="username" placeholder="username">
-                        <input type="password" name="password" placeholder="password">
-                        <input class="button" type="submit" value="Login">
-                <div class="card-body">
-
+               <div class="row pad">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <form action="" method="POST" role="form">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                           <input type="text" name="username" placeholder="username">
+                           <input type="password" name="password" placeholder="password">
+                           <input class="button" type="submit" value="Login">
+                        </form>
                     </div>
-                    
-                    </form>
                 </div>
-            </div>
 
+            </div>
+        </div>
     </div>
 </div>
-</div>
+</html>
 {% endblock %}
