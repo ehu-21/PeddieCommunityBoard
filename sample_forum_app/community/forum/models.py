@@ -17,6 +17,6 @@ class Post(models.Model):
     def get_absolute_url(self):
         """
         Written by Rohan Nunugonda. Supposed to redirect the post to the PostDetail Form after being created, but for some reason
-        does not work.
+        does not work. Bug exists
         """
         return reverse('forum:postDetail', args=(str(self.id)))
