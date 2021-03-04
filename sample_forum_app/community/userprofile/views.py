@@ -41,7 +41,8 @@ def userLogin(request):
 
 def userLogout(request):
     logout(request)
-    return render(request, 'forum/index.html')
+    #return render(request, 'forum/index.html')
+    return redirect('userprofile:login')
 
 @login_required(login_url='userprofile:login')
 def profile(request):

@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
 </head>
 
-
+<!---->
 <div class = "row">
     <div class="column left" style="border-right:1px solid gray">
         <h2 style="width:auto; text-align:center;">Tags</h2>
-        <a style="width:auto; text-align:center;" class="tag1" href"/">tag 1</a>  
+        <a style="width:auto; text-align:center;" class="tag1" href"/">Peddie Academics</a>  
        <!--<p style= "width:100px; text-align:right;">tag</p>--> 
     </div>
     <div class="column right">
@@ -25,62 +25,51 @@
                 
 
         <table class="table">
+            
             <thead>
+                
               <tr>
                 <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Last Post</th>
+                <th scope="col">Title</th>
+                <th scope="col">Date posted</th>
                 <th>Reply</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><a href="" class="detailsText">name</a></td>
-                <td> description </td>
-                <td> date </td>
-                <td><a href=""> Reply</a></td>
+                <!-- {% for post in posts.all %}
+                    <td><a href="{% url 'forum:postDetail' post.pk %}" class="detailsText">{{ post.user }}</a></td>
+                    <td> {{ post.title }} </td>
+                    <td> {{ post.created_at }} </td>
+                    <td><a href=""> Reply</a></td>
+                {% endfor %} -->
+
+                    <!-- This is just a stub, hardcoded values to make sure that index.html displays the table info fine-->
+                    <td>peddie_test</td>
+                    <td> Test Post </td>
+                    <td> 5:00 </td>
+                    <td><a href=""> Reply</a></td>
             </tr>
             </tbody>
           </table>
+
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-md-8 mt-3 left">
+                    {% for post in post_list %}
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                            <p class="card-text text-muted h6">{{ post.user }} | {{ post.created_on }} </p>
+                            <p class="card-text">{{post.content|slice:":200"}}</p>
+                            <a href="{% url 'forum:postDetail' post.pk %}" class="btn btn-primary">Read More &rarr;</a>
+
         </div>
     </div>
-
-
-<!-- <div class="modal fade" id="newModal">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title"></h4>
-        </div>
-        <div class="modal-body">
-            <form action="" method="POST" role="form">
-                {% csrf_token %}
-                {{form.as_p}}
-                <div class="form-group">
-                    <label for="name">Thread Name</label>
-                    <br>
-                        Title
-                </div>
-                <div class="form-group" >
-                    <label for="description">Description</label>
-                    <br>
-                       
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-    </div>
+    {% endfor %}
+</div>
 </div>
 </div> -->
-
-<h1>{{ post.title }}</h1>
-<small>By: {{ post.user }}</small></br>
-<hr>
-<br/>
-{{ post.body }}
-
+   
 {% endblock %}
+

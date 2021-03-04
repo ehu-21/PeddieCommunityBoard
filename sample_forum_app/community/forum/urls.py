@@ -12,6 +12,7 @@ urlpatterns = [
     path('termsConditions/', views.termsAndConditions, name="termsConditions"),
     #path('newPost/', views.newPost, name="newPost"),
     path('newPost/', views.AddPostView.as_view(), name='newPost'),
+    path('post/<int:pk>', views.PostDetailView.as_view(), name='postDetail'),
    
     
 ]
