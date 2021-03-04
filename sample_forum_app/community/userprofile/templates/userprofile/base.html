@@ -19,7 +19,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         
-      
+      <!-- this code makes the navbar with all the different links to other pages in the site -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             {% if user.is_authenticated %}
@@ -60,6 +60,7 @@
 
 {% endif %}           
             </div>
+            <!-- this creates a search bar in the nav bar along with a search button to click -->
             <form class="form-inline">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

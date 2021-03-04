@@ -4,12 +4,13 @@
 {% load static %}
 
 <head>
+    <!-- this link ensures that the formating in css transfers to this code in html -->
     <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
 </head>
 
 <!---->
 <div class = "row">
-    <div class="column left" style="border-right:1px solid gray">
+    <div class="column left" style="border-right:1px solid gray"> <!--barrier between tags and posts-->
         <h2 style="width:auto; text-align:center;">Tags</h2>
         <a style="width:auto; text-align:center;" class="tag1" href"/">Peddie Academics</a>  
        <!--<p style= "width:100px; text-align:right;">tag</p>--> 
@@ -20,7 +21,7 @@
         <div class="col-lg-12 col-lg-offset-0">
         <div class="card-body">
                 <h1 style="font-size:30px; color:black; display:inline-block; width:700px; text-align:left;">Posts</h1>
-                        <a class="post" href="{% url 'forum:newPost' %}" style="color:goldenrod;">New Post</a>
+                        <a class="post" href="{% url 'forum:newPost' %}" style="color:goldenrod;">New Post</a> <!-- button for the new post that links to create a new post page-->
             
                 
 
