@@ -9,7 +9,7 @@ examples of the formats are colors of text, size of text, font, etc. */
 #error {
     color: red;
 }
-
+ 
 a.post:link, a.post:visited{
     display: inline-block;
     background-color: #1c4587;
