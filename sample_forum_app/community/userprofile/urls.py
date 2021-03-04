@@ -5,6 +5,7 @@ from . import views
 app_name = "userprofile"
 
 urlpatterns = [
+    #Made by Rohan Nunugonda. Maps the userprofile urls. 
     path('',views.home, name="home"),
     path('register/',views.userRegistration, name="register"),
     path('login/',views.userLogin,name="login"),

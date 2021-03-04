@@ -4,7 +4,7 @@ from django.urls import reverse
 # Create your models here.
 class Post(models.Model):
     """
-    Written by Rohan Nunugonda. Creates the Post model on which the Post form is created
+    Written by Rohan Nunugonda. Creates the Post model on which the Post form is created. Below 4 lines are the fields the model uses and stores in the database.
     """
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
@@ -17,6 +17,6 @@ class Post(models.Model):
     def get_absolute_url(self):
         """
         Written by Rohan Nunugonda. Supposed to redirect the post to the PostDetail Form after being created, but for some reason
-        does not work. Bug exists
+        does not work. Bug exists (having trouble finding the args for the reverse() function)
         """
         return reverse('forum:postDetail', args=(str(self.id)))

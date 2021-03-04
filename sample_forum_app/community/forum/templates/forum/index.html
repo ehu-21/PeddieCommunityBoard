@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="{% static 'forum/main.css' %}"> 
 </head>
 
-<!---->
+<!--written by Trent (besides the base template I worked from). Base template taken from this source, but heavily edited: https://github.com/Debu07/forum_starter
+ This is what's displayed on the home page of the forum-->
 <div class = "row">
     <div class="column left" style="border-right:1px solid gray"> <!--barrier between tags and posts-->
         <h2 style="width:auto; text-align:center;">Tags</h2>
@@ -38,6 +39,8 @@
             </thead>
             <tbody>
               <tr>
+                  <!-- This part of the code was tried by Rohan Nunugonda. I tried to use a for loop to print out all of the posts in the database, but unfortunately
+                they would not print, so we had to resort to a stub. However, we left the commented code so you could see it. -->
                 <!-- {% for post in posts.all %}
                     <td><a href="{% url 'forum:postDetail' post.pk %}" class="detailsText">{{ post.user }}</a></td>
                     <td> {{ post.title }} </td>
@@ -54,6 +57,10 @@
             </tbody>
           </table>
 
+           <!-- This part of the code was tried by Rohan Nunugonda. I tried to use a for loop to print out all of the posts in the database, but unfortunately
+                they would not print, so we had to resort to a stub. However, we left the commented code so you could see it. This attempt was a little different as it attempted to use
+            a card display format. I wanted to see whether the data could be returned in cards and rendered on the Home page, but it did not work. 
+            Code based off of this tutorial: https://djangocentral.com/building-a-blog-application-with-django/ -->
         <!-- <div class="container">
             <div class="row">
                 <div class="col-md-8 mt-3 left">
